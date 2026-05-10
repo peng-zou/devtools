@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:wxpusher.zjiecode.com)",
+      "Bash(curl *)",
+      "WebSearch",
+      "Bash(bash *)",
+      "Bash(python *)",
+      "Bash(git init *)",
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --src-dir --no-import-alias --use-npm)",
+      "Bash(npx create-next-app@14 --help)",
+      "Bash(cd /tmp)",
+      "Bash(npx create-next-app@14 next-temp --typescript --tailwind --eslint --app --src-dir --no-import-alias --use-npm)",
+      "Bash(cp /tmp/next-temp/package.json .)",
+      "Bash(cp /tmp/next-temp/tsconfig.json .)",
+      "Bash(cp /tmp/next-temp/next.config.mjs .)",
+      "Bash(cp /tmp/next-temp/next-env.d.ts .)",
+      "Bash(cp /tmp/next-temp/postcss.config.mjs .)",
+      "Bash(npm install *)",
+      "Bash(tasklist)",
+      "Bash(npm test *)",
+      "Bash(npx vitest *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}
