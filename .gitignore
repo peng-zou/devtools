@@ -38,3 +38,5 @@ next-env.d.ts
 # zhihu automation
 .zhihu_cookies.json
 output/
+.zhihu_state.json
+.zhihu_browser/
