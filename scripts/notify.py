@@ -7,8 +7,8 @@ import sys
 import json
 import urllib.request
 
-APP_TOKEN = "AT_pOcBREGRNdRSyRjVFzkIzTGXD1R7iGR5"
-USER_UID = "UID_FKkCruqr6YSXFUULfCa0inukRIv7"
+APP_TOKEN = os.environ.get("WXPUSHER_APP_TOKEN", "")
+USER_UID = os.environ.get("WXPUSHER_UID", "")
 
 def send(summary, content):
     data = json.dumps({

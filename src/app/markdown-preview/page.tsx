@@ -14,7 +14,10 @@ function renderMarkdown(md: string): string {
   html = html.replace(/`([^`]+)`/g, '<code class="bg-gray-100 px-1 rounded text-sm">$1</code>')
   html = html.replace(/```(\w*)\n([\s\S]*?)```/g, '<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm my-2"><code>$2</code></pre>')
   html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="max-w-full my-2 rounded" />')
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-600 hover:underline">$1</a>')
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, text, url) => {
+    const safe = /^https?:\/\//i.test(url) ? url : '#'
+    return `<a href="${safe}" class="text-blue-600 hover:underline">${text}</a>`
+  })
   html = html.replace(/^- (.+)$/gm, '<li class="ml-4 list-disc">$1</li>')
   html = html.replace(/^\d+\. (.+)$/gm, '<li class="ml-4 list-decimal">$1</li>')
   html = html.replace(/^(?!<[a-z/])(.+)$/gm, '<p class="my-1">$1</p>')

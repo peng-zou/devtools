@@ -2,7 +2,7 @@ import { tools } from '@/lib/tools'
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://your-domain.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devtools-xi-ecru.vercel.app'
 
   const toolPages = tools.map((tool) => ({
     url: `${baseUrl}${tool.route}`,

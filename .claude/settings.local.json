@@ -23,7 +23,20 @@
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(git *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(gh auth *)",
+      "Bash(vercel whoami *)",
+      "Bash(npx vercel *)",
+      "WebFetch(domain:devtools-xi-ecru.vercel.app)",
+      "Bash(pip install *)",
+      "Bash(export ANTHROPIC_AUTH_TOKEN=\"sk-b9755d8a1a0e4ba3b399e16c08994811\")",
+      "WebFetch(domain:www.zhihu.com)",
+      "Bash(mkdir -p output/published)",
+      "Bash(mv output/*.md output/published/)",
+      "Bash(rm -f output/*.png output/*.txt output/*.html)",
+      "Bash(git rm *)",
+      "Bash(echo \".zhihu_state.json\")",
+      "Bash(echo \".zhihu_browser/\")"
     ]
   }
 }
