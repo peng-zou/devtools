@@ -28,14 +28,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-CN">
-      {GA_ID && (
-        <head>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
-          <script dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${GA_ID}');`
-          }} />
-        </head>
-      )}
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-8532463941776913" />
+        {GA_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+            <script dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${GA_ID}');`
+            }} />
+          </>
+        )}
+      </head>
       <body className="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
         <Header />
         <div className="flex-1">{children}</div>
