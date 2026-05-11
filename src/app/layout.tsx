@@ -4,7 +4,7 @@ import { Footer } from '@/components/Footer'
 import './globals.css'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://devtools-xi-ecru.vercel.app'
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-JX0027HH5T'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
